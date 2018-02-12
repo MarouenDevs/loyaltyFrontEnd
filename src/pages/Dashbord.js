@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import Panel from "react-bootstrap/es/Panel";
 import {Table} from "react-bootstrap";
 import Legend from "../components/Legend";
+import Jumbotron from "react-bootstrap/es/Jumbotron";
+import PageHeader from "react-bootstrap/es/PageHeader";
 
 
 class Dashbord extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
+        this.state = (JSON.parse(localStorage.getItem('state'))? JSON.parse(localStorage.getItem('state')) :{
             riders: {},
             mapStatus: {
                 'bronze': {className: "label label-default", nextState: 'silver'},
@@ -18,7 +20,7 @@ class Dashbord extends Component {
 
 
             }
-        }
+        });
         this.registerSocket(this.state, this);
 
     }
@@ -29,7 +31,7 @@ class Dashbord extends Component {
             let riders = state.riders;
             riders[data.rider_id] = data;
             cb.setState(riders);
-            localStorage.setItem('state', cb.state);
+            localStorage.setItem('state', JSON.stringify(cb.state));
         });
     }
 
@@ -37,6 +39,11 @@ class Dashbord extends Component {
 
         return (
             <div className="row">
+                <PageHeader>
+                    Dashbord
+                    <small>Monotring  real time</small>
+                </PageHeader>
+
                 <div className="col-md-3">
                     <Legend/>
                 </div>

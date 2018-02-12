@@ -21,7 +21,7 @@ class Menu extends Component {
                     <Navbar.Collapse>
                         <Nav>
                             <NavItem eventKey={1} href="/">
-                                Tableau de bord
+                                Dashbord
                             </NavItem>
                             <NavItem eventKey={2} href="/top-riders">
                                 Top riders
