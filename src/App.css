@@ -1,19 +1,28 @@
 .App {
-  text-align: center;
+    text-align: center;
 
 }
 
 tbody {
-  display:block;
-  max-height:500px;
-  overflow-y:scroll;
+    display: block;
+    max-height: 500px;
+    overflow-y: scroll;
 }
+
 thead, tbody tr {
-  display:table;
-  width:100%;
-  table-layout:fixed;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
+
 .well {
-  background: whitesmoke;
+    background: whitesmoke;
+}
+.statis .box {
+    width: 50%;
+    height: 50%;
+    display: inline;
+    margin: 10px;
+    background: whitesmoke;
 }
 

@@ -26,12 +26,14 @@ class Top extends Component {
         this.initRiders();
         this.registerSocket(this.state, this);
     }
+
     registerSocket(state, cb) {
 
         this.props.socket.on('rider', function (data) {
             cb.initRiders();
         });
     }
+
     initRiders() {
 
         let self = this;
