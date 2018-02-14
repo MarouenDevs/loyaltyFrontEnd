@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Panel from "react-bootstrap/es/Panel";
 import {Table} from "react-bootstrap";
 import Legend from "../components/Legend";
-import Jumbotron from "react-bootstrap/es/Jumbotron";
 import PageHeader from "react-bootstrap/es/PageHeader";
 
 
@@ -40,7 +39,7 @@ class Dashbord extends Component {
         return (
             <div className="row">
                 <PageHeader>
-                    Dashbord
+                    Dashboard
                     <small>Monotring  real time</small>
                 </PageHeader>
 

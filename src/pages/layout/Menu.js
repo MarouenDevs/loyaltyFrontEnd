@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {MenuItem, Nav, Navbar, NavDropdown, NavItem} from "react-bootstrap";
+import { Nav, Navbar, NavItem } from "react-bootstrap";
 
 
 class Menu extends Component {
@@ -20,7 +20,7 @@ class Menu extends Component {
                 <Navbar.Collapse>
                     <Nav>
                         <NavItem eventKey={1} href="/">
-                            Dashbord
+                            Dashboard
                         </NavItem>
                         <NavItem eventKey={2} href="/top-riders">
                             Top riders
